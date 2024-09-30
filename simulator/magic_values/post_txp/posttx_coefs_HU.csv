@@ -1,0 +1,33 @@
+"param_type","variable","variable_transformed","variable_transformation","level","coef"
+"coef","intercept",NA,NA,NA,13.3554916422497
+"coef","r_match_age","r_match_age_over_25","over_25",NA,-0.0399273048375112
+"coef","r_match_age","r_match_age_over_60","over_60",NA,-0.0512787297653388
+"coef","patient_bmi","patient_bmi_over_30","over_30",NA,-0.25694434923074
+"coef","donor_age","donor_age_over_25","over_25",NA,-0.0267181305952124
+"coef","delta_weight_nosplit_ma30",NA,NA,"",-0.118691637598293
+"coef","delta_weight_nosplit_ma30","delta_weight_nosplit_ma30_under_20","under_20",NA,-0.125215762525389
+"coef","meld_lab","meld_lab_under_20","under_20",NA,0.106108435573865
+"coef","rescue",NA,NA,"",-1.70180488392296
+"coef","graft_diabetes",NA,NA,"",-1.30784549097017
+"coef","patient_sex",NA,NA,"Female",0.153937539161943
+"coef","dial_biweekly",NA,NA,"",-1.46046690521652
+"coef","txp_blood_group_match",NA,NA,"",0.565918123315447
+"coef","graft_split",NA,NA,"",-1.15874471726817
+"coef","match_geography",NA,NA,"A",-0.146168242640445
+"coef","match_geography",NA,NA,"L",1.58317350392834
+"coef","match_geography",NA,NA,"R",-0.177798261584008
+"coef","graft_dcd",NA,NA,"",-1.91287594523949
+"coef","donor_death_cause_group",NA,NA,"Head trauma",0.758814411655005
+"coef","donor_death_cause_group",NA,NA,"CVA",0.345893380778071
+"coef","donor_death_cause_group",NA,NA,"Anoxia",1.36752323975925
+"coef","donor_death_cause_group",NA,NA,"CNS tumor",-0.998173666237852
+"coef","donor_tumor_history",NA,NA,"",0.248006517067002
+"coef","donor_marginal",NA,NA,"",1.09833672697113
+"coef","recipient_country",NA,NA,"Belgium",0.492055910333928
+"coef","recipient_country",NA,NA,"Croatia",-1.59785203827843
+"coef","recipient_country",NA,NA,"Germany",-0.191536993285675
+"coef","recipient_country",NA,NA,"Hungary",0.69868838375912
+"coef","recipient_country",NA,NA,"Netherlands",0.187054908236821
+"coef","recipient_country",NA,NA,"Slovenia",0.414004189644736
+"coef","retransplant",NA,NA,"",-1.2972305555905
+"shape","intercept",NA,NA,NA,3.0678720486352

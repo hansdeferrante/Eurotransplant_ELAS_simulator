@@ -1,0 +1,129 @@
+---
+title: "Prepare configuration files"
+author: "Hans de Ferrante"
+date: "2024-07-18"
+output: html_document
+---
+
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+here::i_am('.here')
+pacman::p_load(readtext, here, magrittr, glue, dplyr, stringr, tidyr, purrr, readr)
+```
+
+# Purpose
+
+This is a helper file to create yml files for simulations. 
+
+It reads in templates, specified in the template directory and fills in necessary information in these templates (such as the simulation start and end date).
+It also creates multiple template files, with different seeds.
+
+
+```{r settings}
+# K replications per setting.
+K <- 5
+
+path_to_sim <- here('simulator')
+if (!dir.exists(paste(path_to_sim, 'results', Sys.Date(), sep = '/'))) dir.create(paste(path_to_sim, 'results', Sys.Date(), sep = '/'), recursive = TRUE)
+if (!dir.exists(paste(path_to_sim, 'sim_yamls', Sys.Date(), sep = '/'))) dir.create(paste(path_to_sim, 'sim_yamls', Sys.Date(), sep = '/'), recursive = TRUE)
+```
+
+```{r}
+SIM_START_DATE <- '2014-01-01'
+```
+
+
+
+```{r}
+template_files <- list.files(
+  here('simulator', 'sim_yamls', 'templates'),
+  full.names = TRUE,
+  pattern = 'ya?ml'
+  )
+
+template_files <- template_files[str_detect(template_files, 'fake')]
+
+sim_names <- basename(template_files) |> tools::file_path_sans_ext()
+
+nRep <- 1
+settings <- expand_grid(
+  sim_start_date = SIM_START_DATE,
+  load_retxs_from = SIM_START_DATE,
+  load_retxs_to = '2020-01-01',
+  save_match_lists = FALSE,
+  kth_stat = 1:K,
+  rep = 1:nRep,
+  template_path = template_files
+  ) %>%
+  mutate(sim_seed = kth_stat * rep) %>%
+  filter(!(str_detect(template_path, '_dev') & (kth_stat > 1 | rep > 5))) %>%
+  mutate(sim_name = basename(template_path) |> tools::file_path_sans_ext()) %>%
+  mutate(date = as.character(Sys.Date())) %>%
+  mutate(new_template_name = tools::file_path_sans_ext(basename(template_path))) %>%
+  mutate(k='k', s = 's') %>%
+  unite(new_template_name, sim_name, kth_stat, sim_seed, remove=FALSE, sep = '_') %>%
+  mutate(new_template_name = paste(new_template_name, 'yml', sep='.')) %>%
+  mutate(new_template_path = paste(path_to_sim, 'sim_yamls', Sys.Date(), new_template_name, sep = '/')) %>%
+  select(-new_template_name)
+
+settings$k <- NULL
+settings$s <- NULL
+
+settings <- filter(
+  settings,
+  !str_detect(sim_name, 'always')
+)
+```
+
+```{r}
+settings <- mutate(
+  settings,
+  save_match_lists = kth_stat == 1
+)
+```
+
+
+```{r}
+for (sn in sim_names) {
+  dn <- here('simulator', 'results', Sys.Date(), sn)
+  if (!dir.exists(dn)) {
+    dir.create(dn)
+  }
+}
+```
+
+
+
+```{r}
+prepare_config_file <- function(sim_name, sim_seed, sim_start_date, kth_stat, save_match_lists,
+                                allocation_algorithm, search_approach, template_path, new_template_path, load_retxs_to, load_retxs_from, date = Sys.Date(), ...) {
+  
+  tmp <- read_lines(template_path)
+  
+  for ( i in seq_along(tmp)) {
+    tmp[i] <- glue(tmp[i], .open = '{{', .close='}}')
+  }
+  
+  write_lines(
+    tmp,
+    new_template_path
+  )
+  
+}
+```
+
+
+```{r}
+settings %>% split(1:nrow(.)) %>%
+  map(unlist) %>%
+  walk(
+    ~ eval(rlang::expr(prepare_config_file(!!!.x)))
+  )
+```
+
+
+

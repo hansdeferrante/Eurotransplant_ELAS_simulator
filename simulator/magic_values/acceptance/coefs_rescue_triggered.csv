@@ -1,0 +1,18 @@
+variable,variable_transformed,variable_transformation,level,coef
+malignancy,,,1,0.0864622837071138
+donor_tumor_history,,,1,0.112111167226596
+donor_death_cause_group,,,CVA,-0.000611851577718176
+donor_death_cause_group,,,Anoxia,-0.200806140111705
+donor_death_cause_group,,,Other,-0.11080481477486
+donor_death_cause_group,,,CNS tumor,0.0311853335751574
+marginal,,,1,-0.15691423834401
+donor_marginal_free_text,,,1,0.100671586297883
+drug_abuse,,,1,-0.0670396624648164
+d_weight,,,"",2.75142996434213e-05
+donor_age,donor_age_under_18,under_18,,0.00546980882591063
+donor_age,donor_age_over_40,over_40,,0.00705419676983175
+donor_age,donor_age_over_65,over_65,,0.00592098113228146
+donor_age,donor_age_over_75,over_75,,-0.0485070846533022
+hbsag,,,"",0.740682307899275
+hcvab,,,"",-0.107307299916794
+hbcab,,,"",0.152472540192122

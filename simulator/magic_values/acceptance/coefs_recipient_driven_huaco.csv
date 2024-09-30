@@ -1,0 +1,37 @@
+variable,variable_transformed,variable_transformation,level,coef
+intercept,,,,-3.5695356374009
+recipient_country,,,Belgium,-0.355399233486685
+recipient_country,,,Hungary,-0.374436019385146
+recipient_country,,,Croatia,0.75390874869776
+recipient_country,,,Netherlands,-0.211814297412187
+recipient_country,,,Austria,0.0760351657213124
+recipient_country,,,Slovenia,-0.265971950452084
+urgency_code,,,HU,4.0312491354126
+patient_sex,,,Male,0.146840537034152
+listed_kidney,,,1,0.317905467900571
+graft_dcd,,,1,-1.38061248291083
+match_geography,,,H,0.467760729285318
+match_geography,,,L,1.8694656281583
+match_geography,,,R,0.718366174177305
+r_bloodgroup,,,AB,0.108913910379425
+r_bloodgroup,,,B,0.0997397071160633
+r_bloodgroup,,,O,-0.0617259199250863
+r_match_age,,,"",0.00300047149088788
+donor_age,donor_age_under_12,under_12,,-0.474740478173719
+donor_age,,,"",-0.0240821299795781
+donor_age,donor_age_over_65,over_65,,-0.077200340099758
+ratio_weight,ratio_weight_over_175pc,over_175pc,,4.6174141740926
+ratio_weight,ratio_weight_over_125pc,over_125pc,,-5.39439771284785
+ratio_weight,ratio_weight_under_70pc,under_70pc,,-2.10498880506947
+donor_bmi_cat,,,<20,0.335241594524381
+donor_bmi_cat,,,25-30,-0.384406910916023
+donor_bmi_cat,,,30+,-0.826414359768717
+donor_malignancy,,,1,0.527721635507362
+donor_alloc_country,,,Germany,-0.483123820414637
+donor_death_cause_group,,,CVA,0.465532553043676
+donor_death_cause_group,,,Head trauma,0.314877621023644
+donor_death_cause_group,,,Other,-0.15554517389359
+donor_death_cause_group,,,CNS tumor,0.166419522774671
+donor_drug_abuse,,,1,-0.621593204345996
+donor_tumor_history,,,1,-0.281627761214445
+donor_marginal_free_text,,,1,-0.534403217250613

@@ -1,0 +1,121 @@
+ID_SE,TYPE_E,DISEASE_SE,SE_COUNTRY,INITIAL_EQUIVALENT,UPGRADE,UPGRADE_INTERVAL,LAB_MELD_BONUS,LAB_MELD_BONUS_AMOUNT,MAX_EQUIVALENT,MAX_AGE_UPGRADE,REPLACEMENT_SE,ALLOWED_EQS_BY,ALLOWED_EQS_OFFSET
+1,SE,Cholangiocarcinoma,Austria,10,10,80,0,20,100,NA,NA,10,0
+2,SE,Cystic fibrosis,Austria,10,10,80,0,20,100,NA,NA,10,0
+3,SE,Familial Amyloidotic Polyneuropathy (FAP),Austria,15,10,80,0,20,100,NA,NA,10,0
+4,SE,Hepato-pulmonary syndrom (HPS),Austria,15,10,80,0,20,100,NA,NA,10,0
+5,SE,Porto-pulmonary hypertension (PoPH),Austria,25,10,80,0,20,100,NA,NA,10,0
+6,SE,Primary Hyperoxaluria Type 1 (PH1) (Oxalosis),Austria,10,10,80,0,20,100,2,NA,5,0
+7,SE,Polycystic liver disease (PLD),Austria,10,10,80,0,20,100,NA,NA,10,0
+8,SE,Hepatocellular Carcinoma (HCC),Austria,15,10,80,0,20,100,NA,NA,10,0
+9,SE,Non-metastatic hepatoblastoma,Austria,50,0,80,0,20,100,NA,NA,0,0
+10,SE,Urea cycle disorder/organic acidemia,Austria,50,0,80,0,20,100,NA,NA,0,0
+11,SE,"Persistant hepatic dysfunction (including ""small for size""-syndrome)",Austria,20,0,80,1,20,100,NA,NA,0,0
+21,SE,Cholangiocarcinoma,Slovenia,10,10,80,0,20,100,NA,NA,10,0
+22,SE,Cystic fibrosis,Slovenia,10,10,80,0,20,100,NA,NA,10,0
+23,SE,Familial Amyloidotic Polyneuropathy (FAP),Slovenia,15,10,80,0,20,100,NA,NA,10,0
+24,SE,Hepato-pulmonary syndrom (HPS),Slovenia,15,10,80,0,20,100,NA,NA,10,0
+25,SE,Porto-pulmonary hypertension (PoPH),Slovenia,25,10,80,0,20,100,NA,NA,10,0
+26,SE,Primary Hyperoxaluria Type 1 (PH1) (Oxalosis),Slovenia,10,10,80,0,20,100,2,NA,5,0
+27,SE,Polycystic liver disease (PLD),Slovenia,10,10,80,0,20,100,NA,NA,10,0
+28,SE,Hepatocellular Carcinoma (HCC),Slovenia,15,10,80,0,20,100,NA,NA,10,0
+29,SE,Non-metastatic hepatoblastoma,Slovenia,50,0,80,0,20,100,NA,NA,0,0
+30,SE,Urea cycle disorder/organic acidemia,Slovenia,50,0,80,0,20,100,NA,NA,0,0
+31,SE,"Persistant hepatic dysfunction (including ""small for size""-syndrome)",Slovenia,20,0,80,1,20,100,NA,NA,0,0
+41,SE,Familial Amyloidotic Polyneuropathy (FAP),Netherlands,10,10,80,0,20,100,NA,NA,10,0
+42,SE,Hepato-pulmonary syndrom (HPS),Netherlands,10,10,80,0,20,100,NA,NA,10,0
+43,SE,Porto-pulmonary hypertension (PoPH),Netherlands,25,10,80,0,20,100,NA,NA,5,15
+44,SE,Primary Hyperoxaluria Type 1 (PH1) (Oxalosis),Netherlands,10,10,80,0,20,100,2,NA,5,0
+45,SE,Polycystic liver disease (PLD),Netherlands,10,10,80,0,20,100,NA,NA,10,0
+46,SE,Hepatocellular Carcinoma (HCC),Netherlands,10,10,80,0,20,100,NA,NA,10,0
+47,SE,Non-metastatic hepatoblastoma,Netherlands,50,0,80,0,20,100,NA,NA,0,0
+48,SE,Urea cycle disorder/organic acidemia,Netherlands,50,0,80,0,20,100,NA,NA,0,0
+49,SE,"Persistant hepatic dysfunction (including ""small for size""-syndrome)",Netherlands,20,0,80,1,20,100,NA,NA,0,0
+51,SE,Cystic fibrosis,Belgium,10,2.5,80,0,20,100,NA,NA,2.5,0
+52,SE,Familial Amyloidotic Polyneuropathy (FAP),Belgium,15,2.5,80,0,20,100,NA,NA,2.5,0
+53,SE,Hepato-pulmonary syndrom (HPS),Belgium,15,2.5,80,0,20,100,NA,NA,2.5,0
+54,SE,Porto-pulmonary hypertension (PoPH),Belgium,25,2.5,80,0,20,100,NA,NA,2.5,10
+55,SE,Primary Hyperoxaluria Type 1 (PH1) (Oxalosis),Belgium,10,2.5,80,0,20,100,2,NA,2.5,0
+56,SE,Polycystic liver disease (PLD),Belgium,10,2.5,80,0,20,100,NA,NA,2.5,0
+57,SE,Hepatocellular Carcinoma (HCC),Belgium,15,2.5,80,0,20,100,NA,NA,2.5,0
+58,SE,Non-metastatic hepatoblastoma,Belgium,50,2.5,80,0,20,100,NA,NA,2.5,0
+59,SE,Urea cycle disorder/organic acidemia,Belgium,50,2.5,80,0,20,100,NA,NA,2.5,0
+60,SE,"Persistant hepatic dysfunction (including ""small for size""-syndrome)",Belgium,20,2.5,80,1,20,100,NA,NA,2.5,0
+81,SE,Cholangiocarcinoma,Germany,10,10,80,0,20,100,NA,NA,10,0
+82,SE,Cystic fibrosis,Germany,10,10,80,0,20,100,NA,NA,10,0
+83,SE,Familial Amyloidotic Polyneuropathy (FAP),Germany,15,10,80,0,20,100,NA,NA,10,0
+84,SE,Hepato-pulmonary syndrom (HPS),Germany,15,10,80,0,20,100,NA,NA,10,0
+85,SE,Primary Hyperoxaluria Type 1 (PH1) (Oxalosis),Germany,10,10,80,0,20,100,2,NA,5,0
+86,SE,Polycystic liver disease (PLD),Germany,10,10,80,0,20,100,NA,NA,10,0
+87,SE,Hepatocellular Carcinoma (HCC),Germany,15,10,80,0,20,100,NA,NA,10,0
+88,SE,Non-metastatic hepatoblastoma,Germany,50,0,80,0,20,100,NA,NA,0,0
+89,SE,Urea cycle disorder/organic acidemia,Germany,50,0,80,0,20,100,NA,NA,0,0
+90,SE,"Persistant hepatic dysfunction (including ""small for size""-syndrome)",Germany,20,0,80,1,20,100,NA,NA,0,0
+91,SE,Porto-pulmonary hypertension (PoPH),Germany,25,10,80,0,20,100,NA,NA,10,0
+101,SE,Cholangiocarcinoma,Croatia,10,10,80,0,20,100,NA,NA,10,0
+102,SE,Cystic fibrosis,Croatia,10,10,80,0,20,100,NA,NA,10,0
+103,SE,Familial Amyloidotic Polyneuropathy (FAP),Croatia,15,10,80,0,20,100,NA,NA,10,0
+104,SE,Hepato-pulmonary syndrom (HPS),Croatia,15,10,80,0,20,100,NA,NA,10,0
+105,SE,Porto-pulmonary hypertension (PoPH),Croatia,25,10,80,0,20,100,NA,NA,10,0
+106,SE,Primary Hyperoxaluria Type 1 (PH1) (Oxalosis),Croatia,10,10,80,0,20,100,2,NA,5,0
+107,SE,Polycystic liver disease (PLD),Croatia,10,10,80,0,20,100,NA,NA,10,0
+108,SE,Hepatocellular Carcinoma (HCC),Croatia,15,10,80,0,20,100,NA,NA,10,0
+109,SE,Non-metastatic hepatoblastoma,Croatia,50,0,80,0,20,100,NA,NA,0,0
+110,SE,Urea cycle disorder/organic acidemia,Croatia,50,0,80,0,20,100,NA,NA,0,0
+111,SE,"Persistant hepatic dysfunction (including ""small for size""-syndrome)",Croatia,20,0,80,1,20,100,NA,NA,0,0
+114,SE,Hereditary hemorrhagic teleangiectasia (Rendu-Osler-Weber-Syndrome),Netherlands,15,10,80,0,20,100,NA,NA,10,0
+115,SE,Hereditary hemorrhagic teleangiectasia (Rendu-Osler-Weber-Syndrome),Austria,15,10,80,0,20,100,NA,NA,10,0
+116,SE,Hereditary hemorrhagic teleangiectasia (Rendu-Osler-Weber-Syndrome),Slovenia,15,10,80,0,20,100,NA,NA,10,0
+117,SE,Hereditary hemorrhagic teleangiectasia (Rendu-Osler-Weber-Syndrome),Belgium,15,2.5,80,0,20,100,NA,NA,2.5,0
+118,SE,Hereditary hemorrhagic teleangiectasia (Rendu-Osler-Weber-Syndrome),Germany,15,10,80,0,20,100,NA,NA,10,0
+119,SE,Hereditary hemorrhagic teleangiectasia (Rendu-Osler-Weber-Syndrome),Croatia,15,10,80,0,20,100,NA,NA,10,0
+121,SE,Hepatic hemangioendothelioma,Austria,15,10,80,0,20,100,NA,NA,10,0
+122,SE,Hepatic hemangioendothelioma,Slovenia,15,10,80,0,20,100,NA,NA,10,0
+123,SE,Hepatic hemangioendothelioma,Belgium,15,2.5,80,0,20,100,NA,NA,2.5,0
+124,SE,Hepatic hemangioendothelioma,Germany,15,10,80,0,20,100,NA,NA,10,0
+125,SE,Hepatic hemangioendothelioma,Croatia,15,10,80,0,20,100,NA,NA,10,0
+126,SE,Hepatic hemangioendothelioma,Netherlands,15,10,80,0,20,100,NA,NA,10,0
+131,SE,Biliary sepsis,Slovenia,20,0,80,1,20,100,NA,NA,0,0
+132,SE,Biliary sepsis/ Secondary sclerosing cholangitis (SSC),Germany,30,0,80,1,30,100,NA,NA,0,0
+133,SE,Biliary sepsis,Croatia,20,0,80,1,20,100,NA,NA,0,0
+134,SE,Biliary sepsis,Netherlands,20,0,80,1,30,100,NA,NA,0,0
+141,SE,Primary sclerosing cholangitis (PSC),Slovenia,20,0,80,1,20,100,NA,NA,0,0
+142,SE,Primary sclerosing cholangitis (PSC),Germany,15,10,80,0,20,100,NA,NA,10,0
+143,SE,Primary sclerosing cholangitis (PSC),Croatia,20,0,80,1,20,100,NA,NA,0,0
+144,SE,Primary sclerosing cholangitis (PSC),Netherlands,20,0,80,1,30,100,NA,NA,0,0
+145,SE,Biliary atresia,Belgium,60,2.5,80,0,20,100,1,NA,2.5,0
+146,SE,Biliary atresia,Netherlands,60,15,80,0,20,100,1,NA,15,0
+147,SE,Biliary atresia,Croatia,60,15,80,0,20,100,1,NA,15,0
+148,SE,Biliary atresia,Slovenia,60,15,80,0,20,100,1,NA,15,0
+149,SE,Biliary atresia,Austria,60,15,80,0,20,100,1,NA,15,0
+150,SE,Biliary atresia,Germany,60,15,80,0,20,100,1,NA,15,0
+151,SE,Non-metastatic hepatoblastoma,Hungary,50,0,80,0,20,100,NA,NA,0,0
+152,SE,Urea cycle disorder/organic acidemia,Hungary,50,0,80,0,20,100,NA,NA,0,0
+160,SE,Neuro Endocrine Tumor,Germany,15,10,80,0,20,100,NA,NA,10,0
+171,SE,Hepatic artery thrombosis,Austria,100,0,80,0,20,100,NA,NA,0,0
+172,SE,Hepatic artery thrombosis,Belgium,50,2.5,80,0,20,100,NA,NA,2.5,0
+173,SE,Hepatic artery thrombosis,Hungary,100,0,80,0,20,100,NA,NA,0,0
+174,SE,Hepatic artery thrombosis,Netherlands,50,0,80,0,20,100,NA,NA,0,0
+175,SE,Hepatic artery thrombosis,Croatia,100,0,80,0,20,100,NA,NA,0,0
+176,SE,Hepatic artery thrombosis,Slovenia,100,0,80,0,20,100,NA,NA,0,0
+177,SE,Hepatic artery thrombosis,Germany,100,0,80,0,20,100,NA,NA,0,0
+701,PED,PED (12-16 years),Germany,15,10,90,0,0,100,16,NA,5,0
+702,PED,PED (12-16 years),Austria,15,10,90,0,0,100,16,NA,5,0
+703,PED,PED (12-16 years),Belgium,15,10,90,0,0,100,16,NA,5,0
+704,PED,PED (12-16 years),Croatia,15,10,90,0,0,100,16,NA,5,0
+705,PED,PED (12-16 years),Hungary,15,10,90,0,0,100,16,NA,5,0
+706,PED,PED (12-16 years),Netherlands,15,10,90,0,0,100,16,NA,5,0
+707,PED,PED (12-16 years),Slovenia,15,10,90,0,0,100,16,NA,5,0
+801,PED,PED (<12 years),Germany,35,15,90,0,0,100,12,701,5,25
+802,PED,PED (<12 years),Austria,35,15,90,0,0,100,12,702,5,25
+803,PED,PED (<12 years),Belgium,35,15,90,0,0,100,12,703,5,25
+804,PED,PED (<12 years),Croatia,35,15,90,0,0,100,12,704,5,25
+805,PED,PED (<12 years),Slovenia,35,15,90,0,0,100,12,705,5,25
+806,PED,PED (<12 years),Hungary,35,15,90,0,0,100,12,706,5,25
+807,PED,PED (<12 years),Netherlands,35,15,90,0,0,100,12,707,5,25
+901,NSE,NSE,Germany,15,10,80,0,20,100,NA,NA,5,5
+902,NSE,NSE,Austria,10,10,80,0,20,100,NA,NA,5,0
+903,NSE,NSE,Belgium,10,2.5,90,0,20,100,NA,NA,2.5,0
+904,NSE,NSE,Croatia,10,10,80,0,20,100,NA,NA,5,0
+905,NSE,NSE,Hungary,10,10,80,0,20,100,NA,NA,5,0
+906,NSE,NSE,Netherlands,10,10,80,0,20,100,NA,NA,5,0
+907,NSE,NSE,Slovenia,10,10,80,0,20,100,NA,NA,5,0

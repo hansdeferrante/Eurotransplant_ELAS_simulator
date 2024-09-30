@@ -1,0 +1,140 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Feb  2 17:33:44 2022
+
+blood group compatibility rules
+
+@author: H.C. de Ferrante
+"""
+
+import sys
+
+from simulator.magic_values.column_names import LAB_MELD_BONUS_AMOUNT
+sys.path.append('./')
+if True:  # noqa: E402
+    import simulator.magic_values.column_names as cn
+
+# Other groups
+BG_LEVELS = (cn.BG_A, cn.BG_AB, cn.BG_O, cn.BG_B)
+
+# Column names for standard exception rules.
+SE_RULE_COLS = (
+    cn.DISEASE_SE, cn.SE_COUNTRY, cn.SE_UPGRADE,
+    cn.SE_UPGRADE_INTERVAL, cn.LAB_MELD_BONUS,
+    cn.LAB_MELD_BONUS_AMOUNT, cn.MAX_EQUIVALENT
+)
+
+BIOMARKERS = (
+    cn.CREA, cn.BILI, cn.INR, cn.DIAL_BIWEEKLY
+)
+
+CENTER_OFFER_ACCEPTANCE_COLS = (
+    cn.ID_DONOR, cn.D_DCD, cn.D_HOSPITAL,
+    cn.TYPE_OFFER, cn.TYPE_OFFER_DETAILED,
+    cn.D_BLOODGROUP, cn.DON_CENTER_OFFER_GROUP,
+    cn.REC_CENTER_OFFER_GROUP,
+    cn.D_PROC_CENTER,
+    cn.D_ALLOC_COUNTRY, cn.D_ALLOC_REGION, cn.D_ALLOC_CENTER,
+    cn.D_PED,
+    cn.RECIPIENT_CENTER,
+    cn.D_COUNTRY, cn.DONOR_DEATH_CAUSE_GROUP,
+    cn.D_DRUG_ABUSE, cn.D_MALIGNANCY,
+    cn.D_MARGINAL_FREE_TEXT,
+    cn.D_TUMOR_HISTORY,
+    cn.MATCH_CRITERIUM,
+    cn.GEOGRAPHY_MATCH,
+    cn.MATCH_ABROAD,
+    cn.RECIPIENT_COUNTRY,
+    cn.D_WEIGHT, cn.D_AGE
+)
+
+MATCHLIST_COLS = (
+    cn.ID_MTR, cn.MATCH_DATE, cn.ID_TXP,
+    cn.TYPE_OFFER, cn.TYPE_TRANSPLANTED,
+    cn.ID_DONOR, cn.D_DCD, cn.D_WEIGHT,
+    cn.D_BLOODGROUP, cn.D_COUNTRY, cn.D_ALLOC_CENTER,
+    cn.MTCH_TIER, cn.MTCH_LAYER, cn.MTCH_OBL,
+    cn.MTCH_LAYER_MELD, cn.MTCH_LAYER_WT,
+    cn.REC_OFFERED, cn.R_MATCH_AGE, cn.MATCH_CRITERIUM,
+    cn.URGENCY_CODE, cn.R_ACO, cn.R_BLOODGROUP,
+    cn.REC_REQ, cn.REQ_INT, cn.RECIPIENT_COUNTRY,
+    cn.RECIPIENT_CENTER, cn.R_WEIGHT, cn.RNK_OTHER,
+    cn.RNK_ACCEPTED, cn.ACCEPTED, cn.ACTION_CODE,
+    cn.ACTION_CODE_DESC, cn.FINAL_REC_URG_AT_TRANSPLANT
+)
+
+DEFAULT_ATTR_ORDER = (
+    cn.MTCH_TIER, cn.MTCH_LAYER,
+    cn.MTCH_OBL, cn.MTCH_LAYER_MELD,
+    cn.MTCH_LAYER_REG, cn.MTCH_LAYER_WT,
+    cn.MTCH_DATE_TIEBREAK
+)
+
+MTCH_COLS = (
+    cn.MTCH_TIER, cn.MTCH_LAYER, cn.MTCH_OBL,
+    cn.MTCH_LAYER_MELD, cn.MTCH_LAYER_WT
+)
+
+BG_TABS = (cn.TAB1, cn.TAB2, cn.TAB3)
+BG_RULES = (cn.BGC_FULL, cn.BGC_TYPE1, cn.BGC_TYPE2)
+BG_RULES_EXT = BG_RULES + BG_TABS + \
+    (
+        cn.BG_COMP, cn.BG_IDENTICAL, cn.BG_TAB_COL,
+        cn.BG_RULE_COL, cn.BG_PRIORITY
+    )
+
+OBL_CODES = (
+    cn.D_BLOODGROUP, cn.D_COUNTRY, cn.D_ALLOC_CENTER,
+    cn.RECIPIENT_COUNTRY, cn.RECIPIENT_CENTER,
+    cn.MTCH_OBL
+)
+
+TRANSPLANTED_CODES = (
+    cn.T1, cn.T3
+)
+ACCEPTANCE_CODES = (
+    cn.T1, cn.T3, cn.CR, cn.RR, cn.FP
+)
+
+PED_CENTER_OFFERS = (
+    cn.LOCAL_PEDIATRIC_CENTER_OFFER,
+    cn.PEDIATRIC_CENTER_OFFER_INT
+)
+ADULT_CENTER_OFFERS = (
+    cn.LOCAL_GENERAL_CENTER_OFFER,
+    cn.GENERAL_CENTER_OFFER_INT
+)
+
+CENTER_OFFER_COLS = PED_CENTER_OFFERS + ADULT_CENTER_OFFERS
+
+MATCH_TIERS = {
+    cn.SPLIT: (
+        cn.TIER_A, cn.TIER_B, cn.TIER_C, cn.TIER_D,
+        cn.TIER_E, cn.TIER_F
+    ),
+    cn.WLIV: (
+        cn.TIER_A, cn.TIER_B, cn.TIER_C, cn.TIER_D,
+        cn.TIER_E
+    )
+}
+
+REGIONAL_INFO = (
+    cn.ALLOCATION_LOC, cn.ALLOCATION_INT,
+    cn.ALLOCATION_NAT, cn.ALLOCATION_REG
+)
+
+TEST_MRL_COLS = (
+    cn.ID_RECIPIENT, cn.ID_MTR, cn.D_COUNTRY, cn.RECIPIENT_COUNTRY,
+    cn.TYPE_OFFER, cn.D_ALLOC_REGION, cn.D_ALLOC_COUNTRY,
+    cn.D_ALLOC_CENTER, cn.RECIPIENT_CENTER, cn.PATIENT_IS_HU, cn.D_PED,
+    cn.R_PED, cn.R_ACO, cn.D_BLOODGROUP, cn.R_BLOODGROUP,
+    cn.ALLOCATION_LOC, cn.MTCH_TIER, cn.MTCH_LAYER, cn.R_MATCH_AGE
+)
+
+PROFILE_VARS = (
+    cn.PROFILE_HBSAG, cn.PROFILE_HCVAB, cn.PROFILE_HBCAB, cn.PROFILE_SEPSIS,
+    cn.PROFILE_MENINGITIS, cn.PROFILE_MALIGNANCY, cn.PROFILE_DRUG_ABUSE,
+    cn.PROFILE_MARGINAL, cn.PROFILE_RESCUE, cn.PROFILE_LLS,
+    cn.PROFILE_ERL, cn.PROFILE_RL, cn.PROFILE_LL, cn.PROFILE_EUTHANASIA
+)

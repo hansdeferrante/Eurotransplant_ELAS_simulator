@@ -1,0 +1,35 @@
+variable,variable_transformed,variable_transformation,level,coef
+bgc_type2,,,"",2.92994045275637
+d_bloodgroup,,,O,0.192840745742731
+d_bloodgroup,,,B,0.615367282333968
+d_bloodgroup,,,AB,2.78791641495831
+graft_dcd,,,0:type_e-None,0.812043027969068
+graft_dcd,,,1:type_e-None,0.682555990850759
+graft_dcd,,,0:type_e-Other SE,3.41326765623691
+graft_dcd,,,1:type_e-Other SE,-0.802991139734566
+graft_dcd,,,0:type_e-HCC,2.84342330272173
+graft_dcd,,,1:type_e-HCC,0.848575436557526
+graft_dcd,,,0:type_e-NSE,2.29651772220263
+intercept,,,,-8.31313091203388
+listed_kidney,,,1,-1.55992227965591
+local_match_croatia,,,"",0.848120992951756
+match_geography,,,H,-0.354204360423977
+match_geography,,,L,-0.150174250308432
+match_geography,,,R,-0.150174250308432
+meld_lab,,,"",0.142871452010532
+meld_lab,meld_lab_over_18,over_18,,0.0104642234552494
+meld_lab,meld_lab_over_30,over_30,,-0.161896058385885
+patient_sex,,,Female,-0.355388324653402
+r_match_age,,,"",0.0137656836116146
+r_match_age,r_match_age_under_40,under_40,,-0.00195199066327321
+ratio_weight,ratio_weight_over_175pc,over_175pc,,-0.0213129281574879
+ratio_weight,ratio_weight_over_125pc,over_125pc,,-1.4062454413165
+ratio_weight,ratio_weight_under_75pc,under_75pc,,-3.40572232953315
+recipient_country,,,Austria,-0.0543148215761182
+recipient_country,,,Croatia,-1.53157133802803
+recipient_country,,,Hungary,-0.407148255637534
+recipient_country,,,Slovenia,2.30366856505242
+recipient_country,,,Germany,0
+recipient_country,,,Netherlands,0
+retransplant,,,1,-0.442676028148742
+travel_mode,,,plane,0.0323309382088842
