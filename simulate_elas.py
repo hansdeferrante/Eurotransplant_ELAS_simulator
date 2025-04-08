@@ -22,8 +22,8 @@ if __name__ == '__main__':
     sim_set = read_sim_settings(
         os.path.join(
             es.DIR_SIM_SETTINGS,
-            '2024-08-26',
-            'CurrentELAS_validation_fakedata_2_2.yml'
+            '2025-04-08',
+            'fake_CurrentELAS_validation_2_2.yml'
         )
     )
 

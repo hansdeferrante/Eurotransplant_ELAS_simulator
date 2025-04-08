@@ -1,7 +1,7 @@
 SEED: {{sim_seed}}
 SIM_START_DATE: {{sim_start_date}}
-SIM_END_DATE: 2020-01-01
-PATH_STATUS_UPDATES: data/ETLAS/patient_statuses/patstat{{kth_stat}}.csv
+SIM_END_DATE: 2015-01-01
+PATH_STATUS_UPDATES: fake_data/ETLAS/patient_statuses/fake_patstat{{kth_stat}}.csv
 KTH_STATUS_FILE: {{kth_stat}}
 DOWNMARKED_MELD: 6
 LAB_MELD: score_unosmeld
@@ -20,7 +20,10 @@ MAX_MELD_SCORE: 40
 EXC_SLOPE: 0.17557
 EXC_MELD10_EQUIVALENT: .98037
 EXC_MAX: 40
-PATH_SE_SETTINGS: simulator/magic_values/se_rules.csv
+
+SE_MMAT_HORIZON: 365
+SE_MMAT_RECALC_FREQ: 180
+PATH_SE_SETTINGS: simulator/magic_values/BELIAC_se_rules_capped_and_slower.csv
 SIM_RETX: true
 LOAD_RETXS_FROM: {{load_retxs_from}}
 LOAD_RETXS_TO: {{load_retxs_to}}
@@ -40,11 +43,11 @@ USE_REAL_SE: false
 REAL_SE_BEFORE_SIMSTART: false
 VERBOSITY_OBLIGATIONS: 0
 PATH_OFFERS: ../raw_data/offers.csv
-PATH_DONORS: data/ETLAS/donors.csv
-PATH_ACOS: data/ETLAS/aco_statuses.csv
-PATH_DIAGS: data/ETLAS/tv_disease.csv
-PATH_PROFILES: data/ETLAS/profiles.csv
-PATH_RECIPIENTS: data/ETLAS/recipients.csv
+PATH_DONORS: fake_data/ETLAS/fake_donors.csv
+PATH_ACOS: fake_data/ETLAS/fake_aco_statuses.csv
+PATH_DIAGS: fake_data/ETLAS/fake_tv_disease.csv
+PATH_PROFILES: fake_data/ETLAS/fake_profiles.csv
+PATH_RECIPIENTS: fake_data/ETLAS/fake_recipients.csv
 SAVE_MATCH_LISTS: {{save_match_lists}}
 PATH_MATCH_LISTS: match_lists_k{{kth_stat}}_s{{sim_seed}}.csv
 RESULTS_FOLDER: simulator/results/{{date}}/{{sim_name}}/
@@ -53,7 +56,7 @@ PATH_FINAL_PATIENT_STATUS: patients_k{{kth_stat}}_s{{sim_seed}}.csv
 SNAPSHOT_FREQUENCY: 0
 PATH_WAITLIST_SNAPSHOTS: snapshot_k{{kth_stat}}_s{{sim_seed}}.csv
 PATH_TRANSPLANTATIONS: transplantations_k{{kth_stat}}_s{{sim_seed}}.csv
-PATH_OBLIGATIONS: data/ETLAS/obligations.csv
+PATH_OBLIGATIONS: fake_data/ETLAS/fake_obligations.csv
 PATH_EXITS: exits_k{{kth_stat}}_s{{sim_seed}}.csv
 SIMULATE_RANDOM_EFFECTS: true
 JOINT_RANDOM_EFFECTS: false
@@ -86,7 +89,7 @@ SIMULATION_SCORES:
       crea: 9.12
       inr: 9.419
     intercept: 8.5
-    score_limits: &id001 !!python/tuple
+    score_limits: !!python/tuple
     - 6
     - 40
     score_round: false
@@ -110,7 +113,9 @@ SIMULATION_SCORES:
       crea: 7.728
       inr: 10.597
     intercept: 8.422
-    score_limits: *id001
+    score_limits: !!python/tuple
+      - 6
+      - 40
     score_round: false
     trafos:
       bili: log
@@ -132,7 +137,9 @@ SIMULATION_SCORES:
       crea: 9.57
       inr: 11.2
     intercept: 6.43
-    score_limits: *id001
+    score_limits: !!python/tuple
+      - 6
+      - 40
     score_round: false
     trafos:
       bili: log
