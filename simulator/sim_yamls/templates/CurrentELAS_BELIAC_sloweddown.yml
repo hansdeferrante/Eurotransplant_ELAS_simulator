@@ -1,0 +1,147 @@
+SEED: {{sim_seed}}
+SIM_START_DATE: {{sim_start_date}}
+SIM_END_DATE: 2020-01-01
+PATH_STATUS_UPDATES: data/ETLAS/patient_statuses/patstat{{kth_stat}}.csv
+KTH_STATUS_FILE: {{kth_stat}}
+DOWNMARKED_MELD: 6
+LAB_MELD: score_unosmeld
+ALLOCATION_SCORE:
+  coef:
+    patient_sex: 0
+    r_height: 0
+    labmeld: 1
+  intercept: 0
+  score_limits: !!python/tuple
+  - 6
+  - 40
+  score_round: true
+MIN_MELD_SCORE: 6
+MAX_MELD_SCORE: 40
+EXC_SLOPE: 0.17557
+EXC_MELD10_EQUIVALENT: .98037
+EXC_MAX: 40
+
+SE_MMAT_HORIZON: 365
+SE_MMAT_RECALC_FREQ: 180
+PATH_SE_SETTINGS: simulator/magic_values/BELIAC_se_rules_sloweddown.csv
+SIM_RETX: true
+LOAD_RETXS_FROM: {{load_retxs_from}}
+LOAD_RETXS_TO: {{load_retxs_to}}
+SIMULATE_RESCUE: true
+PATH_RESCUE_PROBABILITIES: simulator/magic_values/probabilities_rescue_triggered.csv
+CENTER_ACC_POLICY: 'LR'
+PATIENT_CENTER_OFFER_ASSIGNMENT: 'prop_sq'
+PATIENT_ACC_POLICY: 'LR'
+SEPARATE_HUACO_ACCEPTANCE: true
+SEPARATE_PED_ACCEPTANCE: true
+CENTER_REJECTIONS: true
+AGGREGATE_OBLIGATIONS: false
+USE_REAL_DM: false
+USE_REAL_FU: false
+USE_REAL_PED: false
+USE_REAL_SE: false
+REAL_SE_BEFORE_SIMSTART: false
+VERBOSITY_OBLIGATIONS: 0
+PATH_OFFERS: ../raw_data/offers.csv
+PATH_DONORS: data/ETLAS/donors.csv
+PATH_ACOS: data/ETLAS/aco_statuses.csv
+PATH_DIAGS: data/ETLAS/tv_disease.csv
+PATH_PROFILES: data/ETLAS/profiles.csv
+PATH_RECIPIENTS: data/ETLAS/recipients.csv
+SAVE_MATCH_LISTS: {{save_match_lists}}
+PATH_MATCH_LISTS: match_lists_k{{kth_stat}}_s{{sim_seed}}.csv
+RESULTS_FOLDER: simulator/results/{{date}}/{{sim_name}}/
+PATH_DISCARDS: discards_k{{kth_stat}}_s{{sim_seed}}.csv
+PATH_FINAL_PATIENT_STATUS: patients_k{{kth_stat}}_s{{sim_seed}}.csv
+SNAPSHOT_FREQUENCY: 0
+PATH_WAITLIST_SNAPSHOTS: snapshot_k{{kth_stat}}_s{{sim_seed}}.csv
+PATH_TRANSPLANTATIONS: transplantations_k{{kth_stat}}_s{{sim_seed}}.csv
+PATH_OBLIGATIONS: data/ETLAS/obligations.csv
+PATH_EXITS: exits_k{{kth_stat}}_s{{sim_seed}}.csv
+SIMULATE_RANDOM_EFFECTS: true
+JOINT_RANDOM_EFFECTS: false
+VARCOMPS_RANDOM_EFFECTS:
+  rd_adult_huaco:
+    id_registration: 1.09
+  rd_adult_reg:
+    id_registration: 0.524
+    id_donor: 0.535
+    recipient_center: 0.617
+  rd_ped_huaco:
+    id_registration: 0.946
+  rd_ped_reg:
+    id_registration: 0.03
+    recipient_center: 0.297
+SIMULATION_SCORES:
+  score_dynremeld:
+    caps:
+      bili: !!python/tuple
+      - 0.6
+      - 55
+      crea: !!python/tuple
+      - 0.8
+      - 2.5
+      inr: !!python/tuple
+      - 1
+      - 3
+    coef:
+      bili: 4.136
+      crea: 9.12
+      inr: 9.419
+    intercept: 8.5
+    score_limits: !!python/tuple
+    - 6
+    - 40
+    score_round: false
+    trafos:
+      bili: log
+      crea: log
+      inr: log
+  score_remeld:
+    caps:
+      bili: !!python/tuple
+      - 0.3
+      - 27
+      crea: !!python/tuple
+      - 0.7
+      - 2.5
+      inr: !!python/tuple
+      - 0.1
+      - 2.6
+    coef:
+      bili: 3.446
+      crea: 7.728
+      inr: 10.597
+    intercept: 8.422
+    score_limits: !!python/tuple
+      - 6
+      - 40
+    score_round: false
+    trafos:
+      bili: log
+      crea: log
+      inr: log
+  score_unosmeld:
+    caps:
+      bili: !!python/tuple
+      - 1
+      - .inf
+      crea: !!python/tuple
+      - 1
+      - 4
+      inr: !!python/tuple
+      - 1
+      - .inf
+    coef:
+      bili: 3.78
+      crea: 9.57
+      inr: 11.2
+    intercept: 6.43
+    score_limits: !!python/tuple
+      - 6
+      - 40
+    score_round: false
+    trafos:
+      bili: log
+      crea: log
+      inr: log
